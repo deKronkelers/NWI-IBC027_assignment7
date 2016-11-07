@@ -113,6 +113,12 @@ After removing $5$ is looks like this:
 \end{enumerate}
 
 \section{} %3
+In the worst case scenario the new key must be appended at height $h+1$ in a tree of height $h$. We do $O(1)$ work at non-leaf node, deciding whether to go left or right. We do this a maximum of $O(h - 1)$ times because we increase $h$ on every step and the nodes at height $h$ must be leaf nodes.
+
+At the leaf node we do $O(1)$ work of pointing this leaf to our new key and the new key to the leaf.
+
+The total, worst case time complexity of inserting a key is $O(h - 1 + 1) = O(h)$.
+
 \section{} %4
 It is easier to balance trees using the CLRS definition. Suppose we insert the key $k$ 7 times: We could store this in a tree of depth $3$ the using the CLRS definition whereas the resulting tree using the Data Structures \& Algorithms in C++ (DSAC) definition would need to be of depth $7$.
 
