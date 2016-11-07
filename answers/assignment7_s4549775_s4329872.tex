@@ -85,6 +85,33 @@ After removing $5$ is looks like this:
 \end{tikzpicture}
 
 \section{} %2
+\begin{enumerate}
+	\item Every node has $3$ pointers which are all initially $NIL$.
+	\label{sec2:ppn}
+
+	\item (\ref{sec2:ppn}) means that in the trivial case of a $1$-node BST there are $3$ $NIL$-pointers.
+	\label{sec2:trivial}
+
+	\item Pointers are connected pairwise. $(\forall left_i \neq NIL, \exists p_j \neq NIL) \land (\forall right_i \neq NIL, \exists p_j \neq NIL)$
+	\label{sec2:pcp}
+
+	\item (\ref{sec2:ppn}, \ref{sec2:trivial}, and \ref{sec2:pcp}) can be expressed as a recurrence relation:
+
+	$N_1 = 3$\\
+	$N_k = N_{k - 1} + 1$
+
+	where $N_k$ is the number of $NIL$-pointers in a $k$-node BST.
+
+	\begin{itemize}
+		\item associated homogeneous recurrence relation: $N_k = N_{k - 1}$
+		\item characteristic equation: $r - 1 = 0$
+		\item $r_1 = 1, m_1 = 1$
+	\end{itemize}
+	\label{sec2:rr}
+
+	\item (\ref{sec2:rr}) can be expressed as $f(n) = n + 2$.
+\end{enumerate}
+
 \section{} %3
 \section{} %4
 \section{} %5
