@@ -114,6 +114,12 @@ After removing $5$ is looks like this:
 
 \section{} %3
 \section{} %4
+It is easier to balance trees using the CLRS definition. Suppose we insert the key $k$ 7 times: We could store this in a tree of depth $3$ the using the CLRS definition whereas the resulting tree using the Data Structures \& Algorithms in C++ (DSAC) definition would need to be of depth $7$.
+
+A more balanced tree is desirable because many tree operation's time and space complexity depend on the height of the tree.
+
+The search operation is much easier to implement using the DSAC definition because we always know to go right whereas using the CLRS definition we need to consider both children when searching for $k$ in the scenario proposed above.
+
 \section{} %5
 
 \end{document}
