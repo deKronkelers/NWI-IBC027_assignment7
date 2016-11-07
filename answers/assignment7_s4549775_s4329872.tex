@@ -92,7 +92,9 @@ After removing $5$ is looks like this:
 	\item (\ref{sec2:ppn}) means that in the trivial case of a $1$-node BST there are $3$ $NIL$-pointers.
 	\label{sec2:trivial}
 
-	\item Pointers are connected pairwise. $(\forall left_i \neq NIL, \exists p_j \neq NIL) \land (\forall right_i \neq NIL, \exists p_j \neq NIL)$
+	\item Pointers are connected pairwise.
+
+	$(\forall left_i, \exists p_j, left_i \neq NIL \leftrightarrow p_j \neq NIL) \land (\forall right_i, \exists p_j, right_i \neq NIL \leftrightarrow p_j \neq NIL)$
 	\label{sec2:pcp}
 
 	\item (\ref{sec2:ppn}, \ref{sec2:trivial}, and \ref{sec2:pcp}) can be expressed as a recurrence relation:
