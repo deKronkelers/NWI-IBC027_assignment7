@@ -21,6 +21,18 @@
 This was done in collaboration with Constantin Blach (s4329872).
 
 \section{} %1
+\begin{tikzpicture}[c/.style={circle, draw, minimum width=2em}]
+	\node[c] (A) {9};
+	\node[c, below left=10em of A] (B) {5};
+	\node[c, below right=of A] (C) {12};
+	\node[c, below left=of B] (D) {4};
+	\node[c, below right=of B] (E) {7};
+	\node[c, below left=of C] (F) {10};
+	\node[c, below right=of C] (G) {18};
+	\node[c, below right=of F] (H) {11};
+	\node[c, below right=of E] (I) {8};
+\end{tikzpicture}
+
 \section{} %2
 \section{} %3
 \section{} %4
