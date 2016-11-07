@@ -44,6 +44,27 @@ After inserting all values the binary search tree looks as follows:
 	\draw (F) -- (H);
 \end{tikzpicture}
 
+After removing $9$ is looks like this:
+
+\begin{tikzpicture}[c/.style={circle, draw, minimum width=2em}]
+	\node[c] (A) {10};
+	\node[c, below left=8em of A] (B) {5};
+	\node[c, below right=8em of A] (C) {12};
+	\node[c, below left=of B] (D) {4};
+	\node[c, below right=of B] (E) {7};
+	\node[c, below left=of C] (F) {11};
+	\node[c, below right=of C] (G) {18};
+	\node[c, below right=of E] (I) {8};
+
+	\draw (A) -- (B);
+	\draw (A) -- (C);
+	\draw (B) -- (D);
+	\draw (B) -- (E);
+	\draw (C) -- (F);
+	\draw (C) -- (G);
+	\draw (E) -- (I);
+\end{tikzpicture}
+
 \section{} %2
 \section{} %3
 \section{} %4
