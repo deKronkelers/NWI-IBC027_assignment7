@@ -129,5 +129,13 @@ A more balanced tree is desirable because many tree operation's time and space c
 The search operation is much easier to implement using the DSAC definition because we always know to go right whereas using the CLRS definition we need to consider both children when searching for $k$ in the scenario proposed above.
 
 \section{} %5
+You begin at the root node $p = T.root$. Probe node $p$ and both of its children $l, r$. If $p < l \land p < r$ then return $p$ else if $l < r$ then $p = l, l = p.left, r = p.right$ else $p = r, l = p.left, r = p.right$. Repeat the last step. (Note: $probe(NIL) = \infty$, important for leaf nodes)
+
+Probe complexity: We probe $3$ nodes at every step ($O(1)$) and do this a maximum of $O(\log n)$ times because it's a complete tree and we split the remaining work in half at each step. We do a total of $O(\log n)$ probes.
+
+Correctness:
+We would not be at node $p$ if $p.parent < p$ and we know $p \neq p.parent \neq l \neq r$. If node $p$ is the smallest of the $3$ nodes we probe then we know it is a local minimum. If either of $r, l$ is smaller then $p$ is no local minimum, and we proceed with the test on it's smaller child node because the bigger child already cannot be a local minimum.
+
+Because we increase depth on every step the algorithm is guaranteed to terminate and also find a local minimum as all leaf nodes reached with this method are smaller than their parent and aren't connected to other nodes which means when we reach a leaf node it's guaranteed to be a local minimum. (It's also possible to find one earlier.)
 
 \end{document}
